@@ -4,13 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clearev Consultants — Vehicle Sourcing</title>
-<meta name="description" content="Clearev Consultants — Florida's premier vehicle sourcing brokerage. We find your car, you live your life." />
-<meta name="robots" content="index, follow" />
-<meta property="og:title" content="Clearev Consultants — Vehicle Sourcing" />
-<meta property="og:description" content="Florida's premier vehicle sourcing brokerage. We find your car, you live your life." />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -81,7 +74,7 @@ nav {
   min-height: 100vh;
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -91,7 +84,7 @@ nav {
   background: url('https://s7d1.scene7.com/is/image/hyundai/2026-gv80suv-35t-pst-awd-storrgreen-smokeygreenvanillabeige-frontdrvrangle-studio-3:16-9?wid=1800&hei=1013&fmt=webp'), linear-gradient(135deg, #1B2E4B 0%, #2C4268 100%);
   background-size: cover;
   background-position: center 50%;
-  filter: brightness(0.85);
+  filter: brightness(0.95) contrast(1.05) saturate(1.1);
   transform: scale(1.04);
   transition: transform 9s ease;
 }
@@ -190,8 +183,7 @@ nav {
   gap: 8px;
   opacity: 0.35;
   z-index: 2;
-}
-.hero-scroll span {
+}.hero-scroll span {
   font-size: 9px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -215,6 +207,7 @@ nav {
   height: 85vh;
   overflow: hidden;
   background: #0d1a2b;
+  margin-top: 0;
 }
 
 .showcase-slides {
@@ -236,7 +229,7 @@ nav {
   inset: 0;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.88);
+  filter: brightness(1.0) contrast(1.05) saturate(1.1);
   transform: scale(1.05);
   transition: transform 0.9s cubic-bezier(0.77, 0, 0.18, 1);
 }
@@ -429,11 +422,11 @@ nav {
 section { padding: 90px 60px; }
 
 .eyebrow {
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--gold);
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 14px;
 }
 
@@ -471,10 +464,10 @@ section { padding: 90px 60px; }
 
 .how-num {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 48px;
-  font-weight: 300;
+  font-size: 52px;
+  font-weight: 400;
   color: var(--gold);
-  opacity: 0.3;
+  opacity: 0.75;
   line-height: 1;
   margin-bottom: 16px;
 }
@@ -626,11 +619,11 @@ section { padding: 90px 60px; }
 }
 
 .stat-label {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 300;
   color: var(--muted);
   text-align: right;
-  max-width: 160px;
+  max-width: 180px;
   line-height: 1.5;
 }
 
@@ -644,8 +637,10 @@ section { padding: 90px 60px; }
 
 .testimonial-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 16px;
 }
+
+.mobile-hidden { display: block; }
 
 .founder-statement {
   font-family: 'Cormorant Garamond', serif;
@@ -670,7 +665,7 @@ section { padding: 90px 60px; }
 
 .testimonial-card {
   background: var(--white);
-  padding: 44px 36px;
+  padding: 28px 28px 24px;
   position: relative;
 }
 
@@ -680,12 +675,12 @@ section { padding: 90px 60px; }
 
 .t-mark {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 56px;
+  font-size: 40px;
   font-weight: 300;
   color: var(--gold);
   opacity: 0.25;
-  line-height: 0.6;
-  margin-bottom: 22px;
+  line-height: 1;
+  margin-bottom: 8px;
   display: block;
 }
 
@@ -693,12 +688,12 @@ section { padding: 90px 60px; }
 
 .t-text {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 400;
   font-style: italic;
   color: var(--navy);
-  line-height: 1.7;
-  margin-bottom: 28px;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .founder-card .t-text { color: var(--cream); }
@@ -707,17 +702,17 @@ section { padding: 90px 60px; }
   width: 32px;
   height: 0.5px;
   background: var(--gold);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   opacity: 0.5;
 }
 
 .t-author {
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .founder-card .t-author { color: rgba(201,168,76,0.6); }
@@ -730,18 +725,23 @@ section { padding: 90px 60px; }
   color: var(--gold);
   border: 0.5px solid rgba(201,168,76,0.35);
   padding: 4px 10px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 @media (max-width: 768px) {
   .testimonial-cards { grid-template-columns: 1fr; }
-  .testimonial-section { padding: 60px 24px; }
+  .testimonial-section { padding: 24px 24px 32px !important; }
+  .testimonial-header { margin-bottom: 16px; }
+  .testimonial-card { padding: 20px 20px 18px; }
+  .t-mark { font-size: 32px; margin-bottom: 4px; }
+  .t-text { font-size: 17px; margin-bottom: 12px; }
 }
 
 /* ── WHY ── */
 .why-section {
-  background: var(--white);
-  border-top: 1px solid var(--cream-dark);
+  background: var(--navy);
+  border-top: none;
+  padding-top: 60px;
 }
 
 .why-grid {
@@ -749,13 +749,13 @@ section { padding: 90px 60px; }
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
   margin-top: 52px;
-  border: 0.5px solid var(--cream-dark);
+  border: 0.5px solid rgba(201,168,76,0.2);
 }
 
 .why-card {
   padding: 36px 32px;
-  border-right: 0.5px solid var(--cream-dark);
-  border-bottom: 0.5px solid var(--cream-dark);
+  border-right: 0.5px solid rgba(201,168,76,0.2);
+  border-bottom: 0.5px solid rgba(201,168,76,0.2);
 }
 .why-card:nth-child(3n) { border-right: none; }
 .why-card:nth-child(4), .why-card:nth-child(5), .why-card:nth-child(6) { border-bottom: none; }
@@ -765,21 +765,22 @@ section { padding: 90px 60px; }
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--navy);
+  color: var(--gold);
   margin-bottom: 10px;
 }
 
 .why-desc {
   font-size: 16px;
   font-weight: 400;
-  color: var(--muted);
+  color: rgba(240,234,214,0.75);
   line-height: 1.75;
 }
 
 /* ── PRICING ── */
 .pricing-section {
   background: var(--cream);
-  border-top: 1px solid var(--cream-dark);
+  border-top: none;
+  padding-top: 60px;
 }
 
 .pricing-intro {
@@ -949,171 +950,168 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  /* Nav */
-  nav {
-    padding: 14px 18px;
-    gap: 10px;
+  nav { padding: 18px 24px; }
+  .nav-wordmark { font-size: 12px; letter-spacing: 0.16em; }
+  section { padding: 48px 24px; }
+  .hero-content { padding: 0 24px 60px; }
+  .hero-headline { font-size: 38px; }
+
+  /* HERO image fills mobile screen properly */
+  .hero {
+    min-height: 100svh;
+    background: var(--navy);
+    align-items: center;
+    justify-content: flex-start;
   }
-  .nav-wordmark {
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    white-space: nowrap;
-    flex-shrink: 1;
-    min-width: 0;
+  .hero-bg { display: none; }
+  .hero-overlay { background: none; }
+  .hero-content {
+    padding: 80px 24px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  .nav-cta {
-    font-size: 9px;
-    padding: 9px 12px;
-    letter-spacing: 0.12em;
-    white-space: nowrap;
+  .hero-headline { font-size: 42px; }
+  .hero-eyebrow { font-size: 10px; }
+  .hero-scroll { display: none; }
+  .audience-strip { padding: 16px 24px; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .audience-tags { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; }
+  .audience-tag { font-size: 10px; padding: 4px 10px; }
+  .stat-label { text-align: left; max-width: 100%; }
+
+  /* SHOWCASE — split layout on mobile */
+  .showcase {
+    height: auto;
+    overflow: visible;
+    background: transparent;
+  }
+
+  .showcase-slides {
+    height: auto;
+    flex-direction: column;
+    transform: none !important;
+    gap: 0;
+  }
+
+  /* Each slide stacks vertically on mobile */
+  .showcase-slide {
+    flex: none;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    display: none;
+  }
+
+  .showcase-slide.active {
+    display: flex;
+  }
+
+  /* Top half — car image */
+  .slide-bg {
+    position: relative !important;
+    width: 100%;
+    height: 55vw;
+    min-height: 220px;
+    max-height: 320px;
+    background-size: cover !important;
+    background-position: center 40% !important;
+    filter: brightness(1.0) contrast(1.05) saturate(1.1) !important;
+    transform: none !important;
     flex-shrink: 0;
   }
 
-  /* Hero */
-  .hero { align-items: flex-end; min-height: 100svh; }
-  .hero-bg {
-    background-position: 72% 50%;
-  }
-  .hero-overlay {
-    background:
-      linear-gradient(to top, rgba(10,18,32,0.97) 0%, rgba(10,18,32,0.82) 40%, rgba(10,18,32,0.35) 70%, rgba(10,18,32,0.1) 100%),
-      linear-gradient(to right, rgba(10,18,32,0.55) 0%, rgba(10,18,32,0.0) 55%);
-  }
-  .hero-content {
-    padding: 0 24px 52px;
-    max-width: 100%;
-  }
-  .hero-eyebrow {
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    margin-bottom: 14px;
-  }
-  .hero-eyebrow::before { width: 22px; }
-  .hero-headline {
-    font-size: 38px;
-    margin-bottom: 14px;
-  }
-  .hero-sub {
-    font-size: 17px;
-    margin-bottom: 12px;
-  }
-  .hero-body {
-    font-size: 15px;
-    margin-bottom: 26px;
-    max-width: 100%;
-  }
-  .hero-btn {
-    font-size: 11px;
-    padding: 15px 32px;
-    display: block;
-    text-align: center;
-  }
-  .hero-scroll { display: none; }
+  /* Remove overlay on mobile - car shows full brightness */
+  .slide-gradient { display: none; }
 
-  /* Showcase */
-  .showcase { height: 100svh; max-height: 680px; }
-
-  /* Slide text pinned to bottom with column layout */
+  /* Bottom half — navy text panel */
   .slide-content {
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: stretch;
-    padding-bottom: 60px;
+    position: relative !important;
+    inset: auto;
+    background: #1B2E4B;
+    padding: 28px 24px 36px;
+    display: flex;
+    align-items: flex-start;
+    border-top: 2px solid #C9A84C;
   }
+
   .slide-text-box {
-    padding: 0 24px;
     max-width: 100%;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    backdrop-filter: none !important;
   }
 
-  /* Bottom-up gradient for portrait */
-  .slide-gradient {
-    background: linear-gradient(
-      to top,
-      rgba(10, 18, 32, 0.96) 0%,
-      rgba(10, 18, 32, 0.72) 30%,
-      rgba(10, 18, 32, 0.18) 58%,
-      rgba(10, 18, 32, 0.0) 100%
-    );
+  .slide-audience {
+    font-size: 10px;
+    margin-bottom: 10px;
   }
 
-  /* Per-slide background position optimised for portrait */
-  .showcase-slide:nth-child(1) .slide-bg { background-position: 28% 50%; }
-  .showcase-slide:nth-child(2) .slide-bg { background-position: 55% 45%; }
-  .showcase-slide:nth-child(3) .slide-bg { background-position: 62% 48%; }
-  .showcase-slide:nth-child(4) .slide-bg { background-position: 50% 55%; }
+  .slide-headline {
+    font-size: 30px;
+    color: #FFFFFF;
+  }
 
-  .slide-headline { font-size: 28px; }
-  .slide-audience { font-size: 9px; letter-spacing: 0.18em; }
+  .slide-vehicle-name {
+    color: rgba(201,168,76,0.7);
+    margin-top: 12px;
+  }
 
-  /* Hide counter on mobile — it conflicts with audience label */
-  .slide-counter { display: none; }
-
-  .showcase-arrows { display: none; }
+  /* Dot controls below the text panel */
   .showcase-controls {
-    right: 24px;
-    bottom: 22px;
+    position: relative;
+    bottom: auto;
+    right: auto;
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+    background: #1B2E4B;
+    border-top: 0.5px solid rgba(201,168,76,0.2);
   }
 
-  /* Audience strip */
-  .audience-strip { padding: 16px 24px; flex-direction: column; align-items: flex-start; gap: 10px; }
-  .audience-tags { gap: 6px; }
-  .audience-tag { font-size: 10px; padding: 4px 10px; }
+  .slide-counter { display: none; }
+  .showcase-arrows { display: none; }
 
-  /* Sections */
-  section { padding: 56px 24px; }
-  .section-title { font-size: 28px; }
-
-  /* How it works */
-  .how-grid { grid-template-columns: 1fr 1fr; }
+  .how-section { overflow: hidden; }
+  .how-grid {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 24px;
+  }
   .how-step {
     border-right: none;
     border-bottom: 0.5px solid var(--cream-dark);
-    padding: 24px 0;
+    padding: 20px 12px 20px 0 !important;
   }
-  .how-step:nth-child(odd) { padding-right: 16px; border-right: 0.5px solid var(--cream-dark); }
+  /* Left align all steps on mobile */
+  .how-step:nth-child(odd) { padding-left: 0 !important; padding-right: 12px !important; }
+  .how-step:nth-child(even) { padding-left: 12px !important; border-left: 0.5px solid var(--cream-dark); }
   .how-step:nth-child(3), .how-step:nth-child(4) { border-bottom: none; }
-  .how-num { font-size: 36px; }
-  .how-title { font-size: 12px; }
-  .how-desc { font-size: 14px; }
-
-  /* Vehicles */
+  section { padding: 60px 24px; }
+  .how-grid { grid-template-columns: 1fr 1fr; }
+  .how-step { border-right: none; border-bottom: 0.5px solid var(--cream-dark); padding: 28px 0; }
   .vehicles-grid { grid-template-columns: 1fr; }
-  .vehicles-sub { font-size: 13px; margin-bottom: 36px; }
-
-  /* Founder */
-  .founder-section { grid-template-columns: 1fr; gap: 36px; padding: 56px 24px; }
-  .founder-quote { font-size: 22px; }
-  .founder-body { font-size: 15px; }
-  .stat-num { font-size: 30px; }
-
-  /* Testimonials */
-  .testimonial-section { padding: 56px 24px; }
-  .testimonial-cards { grid-template-columns: 1fr; }
-  .founder-statement { font-size: 18px; }
-  .t-text { font-size: 18px; }
-
-  /* Why */
+  .vehicle-card { padding: 24px 20px; }
+  .vehicle-type { text-align: left; }
+  .vehicle-name { text-align: left; }
+  .vehicle-desc { text-align: left; }
+  .vehicle-range { text-align: left; }
+  .founder-section { grid-template-columns: 1fr; gap: 24px; padding: 40px 24px; }
+  .founder-body { margin-bottom: 8px !important; }
+  .stat-stack { margin-top: 0; }
+  .testimonial-section { padding: 32px 24px 40px !important; }
+  .testimonial-header { margin-bottom: 24px; }
+  .t-divider { margin: 16px auto 24px !important; }
   .why-grid { grid-template-columns: 1fr 1fr; }
-  .why-card { padding: 24px 18px; }
-  .why-title { font-size: 12px; }
-  .why-desc { font-size: 14px; }
-  .why-card:nth-child(3n) { border-right: 0.5px solid var(--cream-dark); }
-  .why-card:nth-child(even) { border-right: none; }
-  .why-card:nth-child(5), .why-card:nth-child(6) { border-bottom: none; }
-  .why-card:nth-child(4) { border-bottom: 0.5px solid var(--cream-dark); }
-
-  /* CTA */
-  .cta-section { grid-template-columns: 1fr; gap: 36px; padding: 56px 24px; }
-  .cta-headline { font-size: 32px; }
-  .cta-right { align-items: stretch; }
-  .cta-main-btn { text-align: center; }
-
-  /* Pricing */
-  .pricing-intro { font-size: 15px; }
-
-  /* Footer */
+  .why-card { padding: 24px 16px; }
+  .why-card .why-title { color: var(--gold); }
+  .mobile-hidden { display: none !important; }
+  .testimonial-cards { grid-template-columns: 1fr !important; }
+  .why-section { padding-top: 40px; padding-bottom: 40px; }
+  .pricing-section { padding-top: 40px; padding-bottom: 40px; }
+  .pricing-intro { margin-bottom: 20px; }
+  .cta-section { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
   footer { padding: 20px 24px; flex-direction: column; align-items: flex-start; gap: 16px; }
-  .footer-links { flex-direction: column; gap: 10px; }
 }
 </style>
 </head>
@@ -1121,7 +1119,9 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <div class="nav-wordmark">Clearev Consultants</div>
+  <a href="#" style="display:flex; align-items:center; text-decoration:none;">
+    <img src="./logo.png" alt="Clearev Consultants" style="height: 48px; width: auto; object-fit: contain;">
+  </a>
   <a class="nav-cta" href="https://tally.so/r/44zoQo" target="_blank">Begin your search</a>
 </nav>
 
@@ -1130,7 +1130,7 @@ footer {
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Vehicle Sourcing Brokerage · Florida</div>
+    <div class="hero-eyebrow">Vehicle Sourcing Brokerage</div>
     <h1 class="hero-headline">We find your car.<br><em>You live your life.</em></h1>
     <p class="hero-sub">The car buying experience you deserve.</p>
     <p class="hero-body">Clearev Consultants takes the entire car buying process off your plate — from search to delivery — so you can focus on what matters most.</p>
@@ -1192,26 +1192,26 @@ footer {
       </div>
     </div>
 
-    <!-- Slide 2: Mercedes — Professional Woman -->
+    <!-- Slide 2: Audi Q7 — Professional Woman -->
     <div class="showcase-slide">
-      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&w=1800&q=80'), linear-gradient(135deg, #1B2E4B 0%, #2C4268 50%, #3D5A80 100%);"></div>
+      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1622701579527-dcd1bb5fbb9b?auto=format&w=1800&q=85'), linear-gradient(135deg, #1B2E4B 0%, #2C4268 50%, #3D5A80 100%); background-size: cover; background-position: center 40%;"></div>
       <div class="slide-gradient"></div>
       <div class="slide-content">
         <div class="slide-text-box">
           <div class="slide-audience">For the professional woman</div>
           <h2 class="slide-headline">No time for<br>the showroom.<br><em>We get it.</em></h2>
-          <div class="slide-vehicle-name">Mercedes-Benz E-Class</div>
+          <div class="slide-vehicle-name">Audi Q7</div>
         </div>
       </div>
     </div>
 
     <!-- Slide 3: Lexus RX — Retiree / Family -->
     <div class="showcase-slide">
-      <div class="slide-bg" style="background-image: url('/lexus-rx.png'), linear-gradient(135deg, #2C3E50 0%, #1B2E4B 50%, #243B55 100%);"></div>
+      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&w=1800&q=85'), url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&w=1800&q=85'), linear-gradient(135deg, #2C3E50 0%, #1B2E4B 50%, #243B55 100%); background-size: cover; background-position: center 55%;"></div>
       <div class="slide-gradient"></div>
       <div class="slide-content">
         <div class="slide-text-box">
-          <div class="slide-audience">For retirees &amp; families</div>
+          <div class="slide-audience">For retirees & families</div>
           <h2 class="slide-headline">Reliable.<br>Comfortable.<br><em>Delivered to you.</em></h2>
           <div class="slide-vehicle-name">Lexus RX 350</div>
         </div>
@@ -1220,11 +1220,11 @@ footer {
 
     <!-- Slide 4: SUV — Caregiver / Family -->
     <div class="showcase-slide">
-      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&w=1800&q=80'), linear-gradient(135deg, #1a2535 0%, #1B2E4B 50%, #2C4268 100%);"></div>
+      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&w=1800&q=80'), linear-gradient(135deg, #1a2535 0%, #1B2E4B 50%, #2C4268 100%); background-size: cover; background-position: center 40%;"></div>
       <div class="slide-gradient"></div>
       <div class="slide-content">
         <div class="slide-text-box">
-          <div class="slide-audience">For caregivers &amp; adult children</div>
+          <div class="slide-audience">For caregivers & adult children</div>
           <h2 class="slide-headline">You're already<br>doing everything.<br><em>Let us handle this one.</em></h2>
           <div class="slide-vehicle-name">SUV · Crossover · Family Vehicle</div>
         </div>
@@ -1254,7 +1254,7 @@ footer {
   <div class="audience-label">We serve</div>
   <div class="audience-tags">
     <span class="audience-tag">Relocating to Florida</span>
-    <span class="audience-tag">Retirees &amp; Families</span>
+    <span class="audience-tag">Retirees & Families</span>
     <span class="audience-tag">Busy Professionals</span>
     <span class="audience-tag">Women Buying Solo</span>
     <span class="audience-tag">First-Time Buyers</span>
@@ -1264,24 +1264,24 @@ footer {
 <!-- VEHICLES WE SOURCE -->
 <section class="vehicles-section">
   <div class="eyebrow">What we source</div>
-  <h2 class="section-title">Whatever you're looking for,<br>we know where to find it.</h2>
-  <p class="vehicles-sub">From practical everyday drivers to premium SUVs, we have access to inventory the general public never sees — including dealer-only auctions and off-market listings.</p>
+  <h2 class="section-title">Whatever you're looking for, we know where to find it.</h2>
+  <p class="vehicles-sub" style="text-align:left;">From practical everyday drivers to premium SUVs, we have access to inventory the general public never sees — including dealer-only auctions and off-market listings.</p>
   <div class="vehicles-grid">
     <div class="vehicle-card">
-      <div class="vehicle-type">Family &amp; Practical</div>
-      <div class="vehicle-name">SUVs &amp; Crossovers</div>
+      <div class="vehicle-type">Family & Practical</div>
+      <div class="vehicle-name">SUVs & Crossovers</div>
       <div class="vehicle-desc">Honda CR-V, Toyota RAV4, Ford Explorer, Kia Telluride and more — reliable, spacious, and priced right.</div>
       <div class="vehicle-range">Budget range: $10,000 – $35,000</div>
     </div>
     <div class="vehicle-card">
       <div class="vehicle-type">Everyday Drivers</div>
-      <div class="vehicle-name">Sedans &amp; Compacts</div>
+      <div class="vehicle-name">Sedans & Compacts</div>
       <div class="vehicle-desc">Toyota Camry, Honda Accord, Hyundai Sonata — fuel-efficient and dependable for the daily commute or new city life.</div>
       <div class="vehicle-range">Budget range: $8,000 – $25,000</div>
     </div>
     <div class="vehicle-card">
-      <div class="vehicle-type">Premium &amp; Elevated</div>
-      <div class="vehicle-name">Luxury &amp; Performance</div>
+      <div class="vehicle-type">Premium & Elevated</div>
+      <div class="vehicle-name">Luxury & Performance</div>
       <div class="vehicle-desc">Lexus, BMW, Mercedes-Benz, Acura — premium options sourced at competitive prices through our auction access.</div>
       <div class="vehicle-range">Budget range: $25,000 – $60,000+</div>
     </div>
@@ -1292,8 +1292,8 @@ footer {
 <section class="founder-section">
   <div>
     <div class="eyebrow">Our story</div>
-    <blockquote class="founder-quote">"We've left a dealership in tears. We built Clearev so no one else has to."</blockquote>
-    <p class="founder-body">After 12 years in corporate project management and a lifetime of frustrating dealership experiences, we founded Clearev Consultants with one mission: to make car buying feel the way it should — effortless, transparent, and completely on your terms.</p>
+    <blockquote class="founder-quote">"I've left a dealership in tears. I built Clearev so no one else has to."</blockquote>
+    <p class="founder-body" style="margin-bottom: 10px;">After 12 years in corporate project management and a lifetime of frustrating dealership experiences, we founded Clearev Consultants with one mission: to make car buying feel the way it should — effortless, transparent, and completely on your terms.</p>
   </div>
   <div>
     <div class="stat-stack">
@@ -1303,46 +1303,52 @@ footer {
       </div>
       <div class="stat-row">
         <div class="stat-num">100%</div>
-        <div class="stat-label">Transparent flat-fee pricing, no hidden commissions</div>
+        <div class="stat-label">Transparent flat-fee pricing,<br>no hidden commissions</div>
       </div>
       <div class="stat-row">
         <div class="stat-num">0</div>
         <div class="stat-label">Dealership visits required — ever</div>
       </div>
       <div class="stat-row">
-        <div class="stat-num">FL + GA</div>
-        <div class="stat-label">Serving clients in Florida and Georgia</div>
+        <div class="stat-num" style="font-size:26px;">Statewide</div>
+        <div class="stat-label">& International</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testimonial-section">
-  <div class="testimonial-header">
-    <div class="eyebrow" style="text-align:center;">Our promise</div>
-    <p class="founder-statement">"We built Clearev because we know what it feels like to leave a dealership overwhelmed, pressured, and taken advantage of. We never want another person to feel that way about one of the biggest purchases of their life. Every client we work with gets the experience we wished we'd had."</p>
-    <div class="t-divider" style="margin: 24px auto 48px;"></div>
+<section class="testimonial-section" style="padding-top: 20px;">
+  <div class="testimonial-header" style="padding-top: 0; margin-top: 0;">
+    <div class="eyebrow" style="text-align:center;">Our Promise</div>
+    <p class="founder-statement">"Clearev was built because we know what it feels like to leave a dealership overwhelmed, pressured, and taken advantage of. You should never have to feel that way about one of the biggest purchases of your life. Every client we work with gets the experience they deserve."</p>
+    <div class="t-divider" style="margin: 20px auto 16px;"></div>
     <h2 class="section-title" style="text-align:center; margin-bottom:0;">What our clients say.</h2>
   </div>
-  <div class="testimonial-cards">
+  <div class="testimonial-cards" style="grid-template-columns: repeat(3, 1fr);">
 
     <!-- Testimonial 1: Marcus & Mom -->
     <div class="testimonial-card">
       <span class="t-mark">"</span>
-      <div class="t-tag">Caregiver · Broward County, FL</div>
       <p class="t-text">I needed a reliable car for my mother and didn't have time to spend weekends at dealerships. They found her the exact Honda CR-V she wanted, kept us informed at every step, and had it delivered to her door in less than a week. My mother felt completely taken care of.</p>
       <div class="t-divider"></div>
-      <div class="t-author">Marcus T.<br>Son &amp; Caregiver</div>
+      <div class="t-author">Marcus T.<br>Son & Caregiver</div>
     </div>
 
     <!-- Testimonial 2: Jean-Pierre & Wife -->
     <div class="testimonial-card">
       <span class="t-mark">"</span>
-      <div class="t-tag">Family Purchase · South Florida</div>
-      <p class="t-text">My wife knew exactly what she wanted and was very particular about every detail. They were patient, professional, and never once made us feel rushed. They worked with me closely, sourced the right vehicle from auction, and made sure my wife was happy with everything before we committed. The process was smooth from start to finish.</p>
+      <p class="t-text">My wife knew exactly what she wanted and was very particular about every detail. They were patient, professional, and never once made us feel rushed. They sourced the right vehicle from auction, and made sure my wife was happy with everything before we committed. Smooth from start to finish.</p>
       <div class="t-divider"></div>
       <div class="t-author">Jean-Pierre M.<br>Family Purchase</div>
+    </div>
+
+    <!-- Testimonial 3: Tanya — hidden on mobile -->
+    <div class="testimonial-card mobile-hidden">
+      <span class="t-mark">"</span>
+      <p class="t-text">My car broke down on my way to work and I was completely stressed out. A friend gave me Clearev's number and honestly it was the best call I ever made. They found me exactly what I needed quickly, kept me updated the whole time, and the price was fair. I've already sent two friends their way — both came back happy.</p>
+      <div class="t-divider"></div>
+      <div class="t-author">Tanya R.<br>First-Time Client</div>
     </div>
 
   </div>
@@ -1351,7 +1357,7 @@ footer {
 <!-- WHY CLEAREV -->
 <section class="why-section">
   <div class="eyebrow">Why Clearev</div>
-  <h2 class="section-title">Everything the dealership<br>never gave you.</h2>
+  <h2 class="section-title" style="color: var(--cream);">Everything the dealership<br>never gave you.</h2>
   <div class="why-grid">
     <div class="why-card">
       <div class="why-title">No pressure, ever</div>
@@ -1429,6 +1435,7 @@ footer {
 <footer>
   <div class="footer-word">Clearev Consultants</div>
   <div class="footer-links">
+    <a href="tel:4045942950">(404) 594-2950</a>
     <a href="https://www.clearevconsultants.com" target="_blank">clearevconsultants.com</a>
     <a href="mailto:info@clearevconsultants.com">info@clearevconsultants.com</a>
     <a href="https://tally.so/r/44zoQo" target="_blank">Begin your search</a>
@@ -1449,15 +1456,29 @@ footer {
   let current = 0;
   let autoTimer;
 
+  function isMobile() { return window.innerWidth <= 768; }
+
   function goTo(index) {
     slides[current].classList.remove('active');
     dots[current].classList.remove('active');
     current = (index + slides.length) % slides.length;
     slides[current].classList.add('active');
     dots[current].classList.add('active');
-    slidesTrack.style.transform = 'translateX(-' + (current * 100) + '%)';
+    if (!isMobile()) {
+      slidesTrack.style.transform = 'translateX(-' + (current * 100) + '%)';
+    } else {
+      slidesTrack.style.transform = 'none';
+    }
     counterEl.textContent = (current + 1).toString().padStart(2, '0');
   }
+
+  window.addEventListener('resize', () => {
+    if (!isMobile()) {
+      slidesTrack.style.transform = 'translateX(-' + (current * 100) + '%)';
+    } else {
+      slidesTrack.style.transform = 'none';
+    }
+  });
 
   function startAuto() {
     autoTimer = setInterval(() => goTo(current + 1), 5000);
