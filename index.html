@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clearev Consultants — Vehicle Sourcing</title>
+<meta name="description" content="Clearev Consultants — Florida's premier vehicle sourcing brokerage. We find your car, you live your life." />
+<meta name="robots" content="index, follow" />
+<meta property="og:title" content="Clearev Consultants — Vehicle Sourcing" />
+<meta property="og:description" content="Florida's premier vehicle sourcing brokerage. We find your car, you live your life." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -942,26 +949,171 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  nav { padding: 18px 24px; }
-  .hero-content { padding: 0 24px 60px; }
-  .hero-headline { font-size: 38px; }
-  .showcase { height: 70vh; }
-  .slide-content { padding: 0 24px 44px; flex-direction: column; align-items: flex-start; gap: 16px; }
+  /* Nav */
+  nav {
+    padding: 14px 18px;
+    gap: 10px;
+  }
+  .nav-wordmark {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    white-space: nowrap;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+  .nav-cta {
+    font-size: 9px;
+    padding: 9px 12px;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Hero */
+  .hero { align-items: flex-end; min-height: 100svh; }
+  .hero-bg {
+    background-position: 72% 50%;
+  }
+  .hero-overlay {
+    background:
+      linear-gradient(to top, rgba(10,18,32,0.97) 0%, rgba(10,18,32,0.82) 40%, rgba(10,18,32,0.35) 70%, rgba(10,18,32,0.1) 100%),
+      linear-gradient(to right, rgba(10,18,32,0.55) 0%, rgba(10,18,32,0.0) 55%);
+  }
+  .hero-content {
+    padding: 0 24px 52px;
+    max-width: 100%;
+  }
+  .hero-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    margin-bottom: 14px;
+  }
+  .hero-eyebrow::before { width: 22px; }
+  .hero-headline {
+    font-size: 38px;
+    margin-bottom: 14px;
+  }
+  .hero-sub {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+  .hero-body {
+    font-size: 15px;
+    margin-bottom: 26px;
+    max-width: 100%;
+  }
+  .hero-btn {
+    font-size: 11px;
+    padding: 15px 32px;
+    display: block;
+    text-align: center;
+  }
+  .hero-scroll { display: none; }
+
+  /* Showcase */
+  .showcase { height: 100svh; max-height: 680px; }
+
+  /* Slide text pinned to bottom with column layout */
+  .slide-content {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    padding-bottom: 60px;
+  }
+  .slide-text-box {
+    padding: 0 24px;
+    max-width: 100%;
+  }
+
+  /* Bottom-up gradient for portrait */
+  .slide-gradient {
+    background: linear-gradient(
+      to top,
+      rgba(10, 18, 32, 0.96) 0%,
+      rgba(10, 18, 32, 0.72) 30%,
+      rgba(10, 18, 32, 0.18) 58%,
+      rgba(10, 18, 32, 0.0) 100%
+    );
+  }
+
+  /* Per-slide background position optimised for portrait */
+  .showcase-slide:nth-child(1) .slide-bg { background-position: 28% 50%; }
+  .showcase-slide:nth-child(2) .slide-bg { background-position: 55% 45%; }
+  .showcase-slide:nth-child(3) .slide-bg { background-position: 62% 48%; }
+  .showcase-slide:nth-child(4) .slide-bg { background-position: 50% 55%; }
+
   .slide-headline { font-size: 28px; }
-  .slide-right { text-align: left; }
+  .slide-audience { font-size: 9px; letter-spacing: 0.18em; }
+
+  /* Hide counter on mobile — it conflicts with audience label */
+  .slide-counter { display: none; }
+
   .showcase-arrows { display: none; }
-  .showcase-controls { right: 24px; bottom: 44px; }
-  .slide-counter { left: 24px; }
+  .showcase-controls {
+    right: 24px;
+    bottom: 22px;
+  }
+
+  /* Audience strip */
   .audience-strip { padding: 16px 24px; flex-direction: column; align-items: flex-start; gap: 10px; }
-  section { padding: 60px 24px; }
+  .audience-tags { gap: 6px; }
+  .audience-tag { font-size: 10px; padding: 4px 10px; }
+
+  /* Sections */
+  section { padding: 56px 24px; }
+  .section-title { font-size: 28px; }
+
+  /* How it works */
   .how-grid { grid-template-columns: 1fr 1fr; }
-  .how-step { border-right: none; border-bottom: 0.5px solid var(--cream-dark); padding: 28px 0; }
+  .how-step {
+    border-right: none;
+    border-bottom: 0.5px solid var(--cream-dark);
+    padding: 24px 0;
+  }
+  .how-step:nth-child(odd) { padding-right: 16px; border-right: 0.5px solid var(--cream-dark); }
+  .how-step:nth-child(3), .how-step:nth-child(4) { border-bottom: none; }
+  .how-num { font-size: 36px; }
+  .how-title { font-size: 12px; }
+  .how-desc { font-size: 14px; }
+
+  /* Vehicles */
   .vehicles-grid { grid-template-columns: 1fr; }
-  .founder-section { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
-  .testimonial-section { padding: 60px 24px; }
+  .vehicles-sub { font-size: 13px; margin-bottom: 36px; }
+
+  /* Founder */
+  .founder-section { grid-template-columns: 1fr; gap: 36px; padding: 56px 24px; }
+  .founder-quote { font-size: 22px; }
+  .founder-body { font-size: 15px; }
+  .stat-num { font-size: 30px; }
+
+  /* Testimonials */
+  .testimonial-section { padding: 56px 24px; }
+  .testimonial-cards { grid-template-columns: 1fr; }
+  .founder-statement { font-size: 18px; }
+  .t-text { font-size: 18px; }
+
+  /* Why */
   .why-grid { grid-template-columns: 1fr 1fr; }
-  .cta-section { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
+  .why-card { padding: 24px 18px; }
+  .why-title { font-size: 12px; }
+  .why-desc { font-size: 14px; }
+  .why-card:nth-child(3n) { border-right: 0.5px solid var(--cream-dark); }
+  .why-card:nth-child(even) { border-right: none; }
+  .why-card:nth-child(5), .why-card:nth-child(6) { border-bottom: none; }
+  .why-card:nth-child(4) { border-bottom: 0.5px solid var(--cream-dark); }
+
+  /* CTA */
+  .cta-section { grid-template-columns: 1fr; gap: 36px; padding: 56px 24px; }
+  .cta-headline { font-size: 32px; }
+  .cta-right { align-items: stretch; }
+  .cta-main-btn { text-align: center; }
+
+  /* Pricing */
+  .pricing-intro { font-size: 15px; }
+
+  /* Footer */
   footer { padding: 20px 24px; flex-direction: column; align-items: flex-start; gap: 16px; }
+  .footer-links { flex-direction: column; gap: 10px; }
 }
 </style>
 </head>
@@ -1055,11 +1207,11 @@ footer {
 
     <!-- Slide 3: Lexus RX — Retiree / Family -->
     <div class="showcase-slide">
-      <div class="slide-bg" style="background-image: url('./lexus-rx-350.png'), linear-gradient(135deg, #2C3E50 0%, #1B2E4B 50%, #243B55 100%); background-size: cover; background-position: center;"></div>
+      <div class="slide-bg" style="background-image: url('/lexus-rx.png'), linear-gradient(135deg, #2C3E50 0%, #1B2E4B 50%, #243B55 100%);"></div>
       <div class="slide-gradient"></div>
       <div class="slide-content">
         <div class="slide-text-box">
-          <div class="slide-audience">For retirees & families</div>
+          <div class="slide-audience">For retirees &amp; families</div>
           <h2 class="slide-headline">Reliable.<br>Comfortable.<br><em>Delivered to you.</em></h2>
           <div class="slide-vehicle-name">Lexus RX 350</div>
         </div>
@@ -1072,7 +1224,7 @@ footer {
       <div class="slide-gradient"></div>
       <div class="slide-content">
         <div class="slide-text-box">
-          <div class="slide-audience">For caregivers & adult children</div>
+          <div class="slide-audience">For caregivers &amp; adult children</div>
           <h2 class="slide-headline">You're already<br>doing everything.<br><em>Let us handle this one.</em></h2>
           <div class="slide-vehicle-name">SUV · Crossover · Family Vehicle</div>
         </div>
@@ -1102,7 +1254,7 @@ footer {
   <div class="audience-label">We serve</div>
   <div class="audience-tags">
     <span class="audience-tag">Relocating to Florida</span>
-    <span class="audience-tag">Retirees & Families</span>
+    <span class="audience-tag">Retirees &amp; Families</span>
     <span class="audience-tag">Busy Professionals</span>
     <span class="audience-tag">Women Buying Solo</span>
     <span class="audience-tag">First-Time Buyers</span>
@@ -1116,20 +1268,20 @@ footer {
   <p class="vehicles-sub">From practical everyday drivers to premium SUVs, we have access to inventory the general public never sees — including dealer-only auctions and off-market listings.</p>
   <div class="vehicles-grid">
     <div class="vehicle-card">
-      <div class="vehicle-type">Family & Practical</div>
-      <div class="vehicle-name">SUVs & Crossovers</div>
+      <div class="vehicle-type">Family &amp; Practical</div>
+      <div class="vehicle-name">SUVs &amp; Crossovers</div>
       <div class="vehicle-desc">Honda CR-V, Toyota RAV4, Ford Explorer, Kia Telluride and more — reliable, spacious, and priced right.</div>
       <div class="vehicle-range">Budget range: $10,000 – $35,000</div>
     </div>
     <div class="vehicle-card">
       <div class="vehicle-type">Everyday Drivers</div>
-      <div class="vehicle-name">Sedans & Compacts</div>
+      <div class="vehicle-name">Sedans &amp; Compacts</div>
       <div class="vehicle-desc">Toyota Camry, Honda Accord, Hyundai Sonata — fuel-efficient and dependable for the daily commute or new city life.</div>
       <div class="vehicle-range">Budget range: $8,000 – $25,000</div>
     </div>
     <div class="vehicle-card">
-      <div class="vehicle-type">Premium & Elevated</div>
-      <div class="vehicle-name">Luxury & Performance</div>
+      <div class="vehicle-type">Premium &amp; Elevated</div>
+      <div class="vehicle-name">Luxury &amp; Performance</div>
       <div class="vehicle-desc">Lexus, BMW, Mercedes-Benz, Acura — premium options sourced at competitive prices through our auction access.</div>
       <div class="vehicle-range">Budget range: $25,000 – $60,000+</div>
     </div>
@@ -1181,7 +1333,7 @@ footer {
       <div class="t-tag">Caregiver · Broward County, FL</div>
       <p class="t-text">I needed a reliable car for my mother and didn't have time to spend weekends at dealerships. They found her the exact Honda CR-V she wanted, kept us informed at every step, and had it delivered to her door in less than a week. My mother felt completely taken care of.</p>
       <div class="t-divider"></div>
-      <div class="t-author">Marcus T.<br>Son & Caregiver</div>
+      <div class="t-author">Marcus T.<br>Son &amp; Caregiver</div>
     </div>
 
     <!-- Testimonial 2: Jean-Pierre & Wife -->
