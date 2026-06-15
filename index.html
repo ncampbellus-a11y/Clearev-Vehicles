@@ -485,12 +485,27 @@ section { padding: 90px 60px; }
 .vehicles-section .section-title { color: var(--cream); }
 
 .vehicles-sub {
-  font-size: 14px;
-  font-weight: 300;
-  color: rgba(240,234,214,0.55);
-  max-width: 480px;
-  margin-bottom: 52px;
+  font-size: 17px;
+  font-weight: 400;
+  color: rgba(240,234,214,0.8);
+  max-width: 100%;
+  margin-bottom: 24px;
   line-height: 1.85;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .vehicles-sub {
+    white-space: normal !important;
+    font-size: 15px;
+  }
+  .broker-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .broker-section {
+    padding: 40px 24px 20px !important;
+  }
 }
 
 .vehicles-grid {
@@ -919,6 +934,24 @@ footer {
   gap: 12px;
 }
 
+@media (max-width: 768px) {
+  footer {
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .footer-links a {
+    white-space: nowrap;
+  }
+}
+
 .footer-word {
   font-family: 'Cormorant Garamond', serif;
   font-size: 16px;
@@ -975,9 +1008,22 @@ footer {
 @media (max-width: 768px) {
   nav { padding: 18px 24px; }
   .nav-wordmark { font-size: 12px; letter-spacing: 0.16em; }
+  .nav-broker { display: none !important; }
   section { padding: 48px 24px; }
   .hero-content { padding: 0 24px 60px; }
   .hero-headline { font-size: 38px; }
+  .mobile-broker {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+  .mobile-broker span {
+    font-size: 17px !important;
+    letter-spacing: 0.25em !important;
+  }
 
   /* HERO image fills mobile screen properly */
   .hero {
@@ -989,7 +1035,7 @@ footer {
   .hero-bg { display: none; }
   .hero-overlay { background: none; }
   .hero-content {
-    padding: 80px 24px 60px;
+    padding: 40px 24px 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1140,8 +1186,8 @@ footer {
 <body>
 
 <!-- NAV -->
-<nav>
-  <a href="#" style="display:flex; align-items:center; text-decoration:none;">
+<nav style="display:grid; grid-template-columns:1fr auto 1fr; align-items:center;">
+  <a href="#" style="display:flex; align-items:center; text-decoration:none; justify-content:flex-start;">
     <svg height="40" viewBox="0 0 400 75" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;">
       <text font-family="Georgia, 'Times New Roman', serif" font-size="56" font-weight="700" letter-spacing="1">
         <tspan x="0" y="50" fill="#F5F2EC">CLEAR</tspan><tspan fill="#C9A84C">EV</tspan>
@@ -1151,6 +1197,12 @@ footer {
       <line x1="230" y1="65" x2="274" y2="65" stroke="#C9A84C" stroke-width="1.5"/>
     </svg>
   </a>
+  <div class="nav-broker" style="display:flex; align-items:center; gap:14px;">
+    <div style="width:40px; height:0.5px; background:#C9A84C; opacity:0.6;"></div>
+    <span style="font-family:'Jost',sans-serif; font-size:20px; letter-spacing:0.3em; text-transform:uppercase; color:#C9A84C; font-weight:500; white-space:nowrap;">Vehicle Sourcing Brokerage</span>
+    <div style="width:40px; height:0.5px; background:#C9A84C; opacity:0.6;"></div>
+  </div>
+  <div></div>
 </nav>
 
 <!-- HERO -->
@@ -1158,11 +1210,15 @@ footer {
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Vehicle Sourcing Brokerage</div>
+    <div class="mobile-broker" style="display:none;">
+      <div style="width:30px; height:0.5px; background:#C9A84C; opacity:0.6;"></div>
+      <span style="font-family:'Jost',sans-serif; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C; font-weight:500;">Vehicle Sourcing Brokerage</span>
+      <div style="width:30px; height:0.5px; background:#C9A84C; opacity:0.6;"></div>
+    </div>
     <h1 class="hero-headline">We find your car.<br><em>You live your life.</em></h1>
     <p class="hero-sub">The car buying experience you deserve.</p>
     <p class="hero-body">Clearev Consultants takes the entire car buying process off your plate — from search to delivery — so you can focus on what matters most.</p>
-    <a class="hero-btn" href="https://tally.so/r/44zoQo" target="_blank">Begin your search →</a>
+    <a class="hero-btn" href="https://tally.so/r/44zoQo" target="_blank">Speak to a Consultant →</a>
   </div>
   <div class="hero-scroll">
     <div class="scroll-line"></div>
@@ -1289,10 +1345,20 @@ footer {
   </div>
 </div>
 
+<!-- BROKER EXPLAINER -->
+<section class="broker-section" style="background: var(--navy); padding: 52px 60px 20px; border-top: 1px solid rgba(201,168,76,0.2);">
+  <div class="eyebrow">What is a vehicle sourcing broker?</div>
+  <h2 class="section-title" style="color: var(--cream); max-width: 100%; margin-bottom: 20px;">We work for you — not a dealership.</h2>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 52px;" class="broker-grid">
+    <p style="font-size:17px; font-weight:400; color:rgba(240,234,214,0.8); line-height:1.85;">Unlike a dealership that sells from its own lot, Clearev Consultants is an independent broker. We have no inventory, no sales quotas, and no manufacturer incentives. Our only job is to find <em style="color:var(--gold);">your</em> vehicle at the best possible price — from any dealer, auction, or private seller.</p>
+    <p style="font-size:17px; font-weight:400; color:rgba(240,234,214,0.8); line-height:1.85;">That means you get access to a far wider selection than any single dealership can offer, with someone negotiating on your behalf — not against you. We are paid a flat fee by you, so our interests are always aligned with yours.</p>
+  </div>
+</section>
+
 <!-- VEHICLES WE SOURCE -->
-<section class="vehicles-section">
-  <div class="eyebrow">What we source</div>
-  <h2 class="section-title">Whatever you're looking for, we know where to find it.</h2>
+<section class="vehicles-section" style="padding-top: 20px;">
+  <div class="eyebrow">What we can find for you</div>
+  <h2 class="section-title">Whatever you need, wherever it is — we'll find it.</h2>
   <p class="vehicles-sub" style="text-align:left;">From practical everyday drivers to premium SUVs, we have access to inventory the general public never sees — including dealer-only auctions and off-market listings.</p>
   <div class="vehicles-grid">
     <div class="vehicle-card">
@@ -1454,7 +1520,7 @@ footer {
     <p class="cta-sub">No commitment required. Just tell us what you need and we'll be in touch within one business day.</p>
   </div>
   <div class="cta-right">
-    <a class="cta-main-btn" href="https://tally.so/r/44zoQo" target="_blank">Begin your search</a>
+    <a class="cta-main-btn" href="https://tally.so/r/44zoQo" target="_blank">Speak to a Consultant</a>
     <p class="cta-reassure">Free consultation · No dealership visits · Delivered to your door</p>
   </div>
 </section>
