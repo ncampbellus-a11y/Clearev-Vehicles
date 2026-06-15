@@ -212,6 +212,7 @@ nav {
   position: relative;
   height: 100%;
   overflow: hidden;
+  display: block;
 }
 
 .slide-bg {
@@ -920,25 +921,57 @@ footer {
 
 .footer-word {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.18em;
-  color: rgba(201,168,76,0.45);
+  color: var(--gold);
   text-transform: uppercase;
 }
 
 .footer-links { display: flex; gap: 28px; }
 
 .footer-links a {
-  font-size: 11px;
-  font-weight: 300;
-  color: rgba(240,234,214,0.3);
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(240,234,214,0.85);
   text-decoration: none;
   letter-spacing: 0.06em;
   transition: color 0.2s;
 }
 .footer-links a:hover { color: var(--gold); }
 
-/* ── RESPONSIVE ── */
+@media (min-width: 769px) {
+  .showcase-slide {
+    flex: 0 0 100%;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    display: block !important;
+  }
+  .slide-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: unset !important;
+    max-height: unset !important;
+    transform: scale(1.05) !important;
+  }
+  .showcase-slide.active .slide-bg {
+    transform: scale(1) !important;
+  }
+  .slide-content {
+    position: absolute !important;
+    inset: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 60px !important;
+    background: none !important;
+    border: none !important;
+  }
+  .slide-gradient {
+    display: block !important;
+  }
+}
 @media (max-width: 768px) {
   nav { padding: 18px 24px; }
   .nav-wordmark { font-size: 12px; letter-spacing: 0.16em; }
@@ -988,9 +1021,8 @@ footer {
     flex: none;
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
     display: none;
+    flex-direction: column;
   }
 
   .showcase-slide.active {
@@ -1119,7 +1151,6 @@ footer {
       <line x1="230" y1="65" x2="274" y2="65" stroke="#C9A84C" stroke-width="1.5"/>
     </svg>
   </a>
-  <a class="nav-cta" href="https://tally.so/r/44zoQo" target="_blank">Begin your search</a>
 </nav>
 
 <!-- HERO -->
@@ -1204,7 +1235,7 @@ footer {
 
     <!-- Slide 3: Lexus RX — Retiree / Family -->
     <div class="showcase-slide">
-      <div class="slide-bg" style="background-image: url('./lexus-rx-350.png'), linear-gradient(135deg, #2C3E50 0%, #1B2E4B 50%, #243B55 100%); background-size: cover; background-position: center 55%;"></div>
+      <div class="slide-bg" style="background-image: url('https://raw.githubusercontent.com/ncampbellus-a11y/Clearev-Vehicles/main/lexus-rx-350.png'), linear-gradient(135deg, #2C3E50 0%, #1B2E4B 50%, #243B55 100%); background-size: cover; background-position: center 55%;"></div>
       <div class="slide-gradient"></div>
       <div class="slide-content">
         <div class="slide-text-box">
@@ -1217,7 +1248,7 @@ footer {
 
     <!-- Slide 4: SUV — Caregiver / Family -->
     <div class="showcase-slide">
-      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&w=1800&q=85'), linear-gradient(135deg, #1a2535 0%, #1B2E4B 50%, #2C4268 100%); background-size: cover; background-position: center 35%;"></div>
+      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&w=1800&q=85'), linear-gradient(135deg, #1a2535 0%, #1B2E4B 50%, #2C4268 100%); background-size: cover; background-position: center 65%;"></div>
       <div class="slide-gradient"></div>
       <div class="slide-content">
         <div class="slide-text-box">
@@ -1435,7 +1466,6 @@ footer {
     <a href="tel:4045942950">(404) 594-2950</a>
     <a href="https://www.clearevconsultants.com" target="_blank">clearevconsultants.com</a>
     <a href="mailto:info@clearevconsultants.com">info@clearevconsultants.com</a>
-    <a href="https://tally.so/r/44zoQo" target="_blank">Begin your search</a>
   </div>
 </footer>
 
