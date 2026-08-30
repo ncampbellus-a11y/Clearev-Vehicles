@@ -68,53 +68,7 @@
   "openingHours": "Mo-Fr 09:00-18:00",
   "sameAs": [
     "https://www.clearevconsultants.com"
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Vehicle Sourcing Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Vehicle Sourcing for Vehicles up to $10,000",
-          "description": "We source and deliver vehicles priced up to $10,000",
-          "price": "500",
-          "priceCurrency": "USD"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Vehicle Sourcing for $10,001 - $20,000",
-          "description": "We source and deliver vehicles priced $10,001 to $20,000",
-          "price": "750",
-          "priceCurrency": "USD"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Vehicle Sourcing for $20,001 - $30,000",
-          "description": "We source and deliver vehicles priced $20,001 to $30,000",
-          "price": "1000",
-          "priceCurrency": "USD"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Vehicle Sourcing for $30,001 and above",
-          "description": "We source and deliver vehicles priced $30,001 and above",
-          "price": "1500",
-          "priceCurrency": "USD"
-        }
-      }
-    ]
-  }
+  ]
 }
 </script>
 
@@ -372,7 +326,7 @@ nav {
 
 .slide-vehicle-name {
   font-size: 11px;
-  font-weight: 300;
+  font-weight: 400;
   color: rgba(201, 168, 76, 0.55);
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -418,9 +372,9 @@ nav {
 .slide-vehicle-name {
   font-family: 'Cormorant Garamond', serif;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
-  color: rgba(240,234,214,0.45);
+  color: rgba(240,234,214,0.8);
   letter-spacing: 0.06em;
   margin-bottom: 18px;
 }
@@ -521,6 +475,13 @@ nav {
   font-weight: 400;
   padding: 5px 14px;
   border: 0.5px solid rgba(27,46,75,0.25);
+}
+
+.audience-tag--priority {
+  background: var(--navy);
+  color: var(--cream);
+  border-color: var(--navy);
+  font-weight: 500;
 }
 
 /* ── SECTIONS ── */
@@ -649,7 +610,7 @@ section { padding: 90px 60px; }
 /* ── TIMELINE SECTION (new) ── */
 .timeline-section {
   background: var(--navy);
-  padding-top: 0;
+  padding-top: 96px;
 }
 
 .timeline-section .eyebrow { color: var(--gold); }
@@ -685,9 +646,9 @@ section { padding: 90px 60px; }
 }
 
 .timeline-step-desc {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  color: rgba(240,234,214,0.8);
+  color: rgba(240,234,214,0.95);
   line-height: 1.75;
   align-self: center;
 }
@@ -739,7 +700,7 @@ section { padding: 90px 60px; }
 .faq-item[open] .faq-icon { transform: rotate(45deg); }
 
 .faq-answer {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--muted);
   line-height: 1.75;
@@ -771,9 +732,9 @@ section { padding: 90px 60px; }
 .vehicles-section .section-title { color: var(--cream); }
 
 .vehicles-sub {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 400;
-  color: rgba(240,234,214,0.8);
+  color: rgba(240,234,214,0.95);
   max-width: 100%;
   margin-bottom: 24px;
   line-height: 1.85;
@@ -827,9 +788,9 @@ section { padding: 90px 60px; }
 }
 
 .vehicle-desc {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 400;
-  color: rgba(240,234,214,0.65);
+  color: rgba(240,234,214,0.9);
   line-height: 1.75;
   margin-bottom: 16px;
 }
@@ -853,7 +814,7 @@ section { padding: 90px 60px; }
 .founder-quote {
   font-family: 'Cormorant Garamond', serif;
   font-size: 28px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   color: var(--navy);
   line-height: 1.45;
@@ -863,11 +824,10 @@ section { padding: 90px 60px; }
 }
 
 .founder-body {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--navy);
   line-height: 1.85;
-  opacity: 0.85;
   margin-bottom: 22px;
 }
 
@@ -905,14 +865,14 @@ section { padding: 90px 60px; }
 .stat-num {
   font-family: 'Cormorant Garamond', serif;
   font-size: 38px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--navy);
   line-height: 1;
 }
 
 .stat-label {
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--muted);
   text-align: right;
   max-width: 180px;
@@ -937,7 +897,7 @@ section { padding: 90px 60px; }
 .founder-statement {
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   color: var(--navy);
   line-height: 1.65;
@@ -1062,15 +1022,15 @@ section { padding: 90px 60px; }
 }
 
 .why-desc {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  color: rgba(240,234,214,0.75);
+  color: rgba(240,234,214,0.95);
   line-height: 1.75;
 }
 
 /* ── PRICING ── */
 .pricing-section {
-  background: var(--cream);
+  background: #F7F4ED;
   border-top: none;
   padding-top: 60px;
 }
@@ -1090,9 +1050,12 @@ section { padding: 90px 60px; }
 .pricing-tier-sub {
   font-size: 16px;
   font-weight: 400;
-  color: var(--muted);
+  color: var(--navy);
   line-height: 1.75;
 }
+
+.pricing-section .why-title { color: var(--gold-dark); }
+.pricing-section .why-desc { color: var(--navy); }
 
 .pricing-cards {
   display: grid;
@@ -1431,9 +1394,9 @@ details[open] .summary-icon { transform: rotate(45deg); }
 .cta-headline em { font-style: italic; color: var(--gold); }
 
 .cta-sub {
-  font-size: 14px;
-  font-weight: 300;
-  color: rgba(240,234,214,0.5);
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(240,234,214,0.95);
   line-height: 1.8;
 }
 
@@ -1462,9 +1425,9 @@ details[open] .summary-icon { transform: rotate(45deg); }
 .cta-main-btn:hover { background: var(--cream); }
 
 .cta-reassure {
-  font-size: 12px;
-  font-weight: 300;
-  color: rgba(240,234,214,0.35);
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(240,234,214,0.7);
   text-align: center;
   width: 100%;
   line-height: 1.6;
@@ -1512,7 +1475,7 @@ footer {
 .footer-links a {
   font-size: 14px;
   font-weight: 400;
-  color: rgba(240,234,214,0.85);
+  color: rgba(240,234,214,0.95);
   text-decoration: none;
   letter-spacing: 0.06em;
   transition: color 0.2s;
@@ -1766,7 +1729,7 @@ footer {
     <p class="hero-sub">The car buying experience you deserve.</p>
 <p class="hero-body">We search dealer-only auctions and match you to your best options — consult with you, bid, and hopefully win. Average client saves $2,800 or more.</p>
     <a class="hero-btn" href="https://tally.so/r/yPgxO8" target="_blank">Free Manheim Auction Match →</a>
-    <p style="font-size:13px; color:rgba(240,234,214,0.55); margin-top:14px; font-style:italic;">No commitment. Just clarity on what you're driving into.</p>
+    <p style="font-size:13px; color:rgba(240,234,214,0.7); margin-top:14px; font-style:italic;">No commitment. Just clarity on what you're driving into.</p>
   </div>
   <div class="hero-scroll">
     <div class="scroll-line"></div>
@@ -1798,7 +1761,7 @@ footer {
         <div class="timeline-step-label">Step 3</div>
         <div class="timeline-step-day">Once your vehicle is secured</div>
       </div>
-      <div class="timeline-step-desc">If you're a Florida resident, we handle full title transfer and registration. If you're out of state, we provide step-by-step guidance so your paperwork is filed correctly.</div>
+      <div class="timeline-step-desc">If you're a Georgia resident, we handle full title transfer and registration. If you're out of state, we provide step-by-step guidance so your paperwork is filed correctly.</div>
     </div>
     <div class="timeline-item">
       <div>
@@ -1901,10 +1864,10 @@ footer {
 <div class="audience-strip">
   <div class="audience-label">We serve</div>
   <div class="audience-tags">
+    <span class="audience-tag audience-tag--priority">Women Buying Solo</span>
+    <span class="audience-tag audience-tag--priority">Caregivers & Adult Children</span>
     <span class="audience-tag">Relocating to Florida</span>
-    <span class="audience-tag">Retirees & Families</span>
     <span class="audience-tag">Busy Professionals</span>
-    <span class="audience-tag">Women Buying Solo</span>
     <span class="audience-tag">First-Time Buyers</span>
   </div>
 </div>
@@ -1950,8 +1913,8 @@ footer {
   <div class="eyebrow">What is a vehicle sourcing broker?</div>
   <h2 class="section-title" style="color: var(--cream); max-width: 100%; margin-bottom: 20px;">We work for you — not a dealership.</h2>
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 52px;" class="broker-grid">
-    <p style="font-size:17px; font-weight:400; color:rgba(240,234,214,0.8); line-height:1.85;">Clearev Consultants is an independent vehicle sourcing broker. We source through dealer-only auctions and a private network of dealers — inventory the general public cannot access on their own. We have no lot, no quotas, and no manufacturer ties. Our only job is to find <em style="color:var(--gold);">your</em> vehicle at the right price.</p>
-    <p style="font-size:17px; font-weight:400; color:rgba(240,234,214,0.8); line-height:1.85;">That means you get access to a wider selection than walking into any single dealership, with someone negotiating on your behalf — not against you. We are paid a flat fee by you, so our interests are always aligned with yours.</p>
+    <p style="font-size:18px; font-weight:400; color:rgba(240,234,214,0.8); line-height:1.85;">Clearev Consultants is an independent vehicle sourcing broker. We source through dealer-only auctions and a private network of dealers — inventory the general public cannot access on their own. We have no lot, no quotas, and no manufacturer ties. Our only job is to find <em style="color:var(--gold);">your</em> vehicle at the right price.</p>
+    <p style="font-size:18px; font-weight:400; color:rgba(240,234,214,0.8); line-height:1.85;">That means you get access to a wider selection than walking into any single dealership, with someone negotiating on your behalf — not against you. We are paid directly by you, so our interests are always aligned with yours.</p>
   </div>
 </section>
 
@@ -2063,7 +2026,7 @@ footer {
     </div>
     <div class="why-card">
       <div class="why-title">Transparent fees</div>
-     <div class="why-desc">No hidden markups, no dealer kickbacks, no surprise fees. Your flat fee is disclosed upfront — every time.</div>
+     <div class="why-desc">No hidden markups, no dealer kickbacks, no surprise fees. What you're paying us is disclosed upfront — every time.</div>
     </div>
     <div class="why-card">
       <div class="why-title">Delivery available</div>
@@ -2080,74 +2043,11 @@ footer {
   </div>
 </section>
 
-<!-- PRICING -->
+<!-- ADDITIONAL SERVICES -->
 <section class="pricing-section">
   <div class="pricing-tier-intro">
-    <div class="eyebrow" style="justify-content:center; display:flex;">Our fees</div>
-    <h2 class="section-title">Our Fee. Your Savings. Do The Math.</h2>
-<p class="pricing-tier-sub">Flat fee. No percentage of your purchase. No surprises. Every tier includes a free 15-minute strategy call before you commit — and a personal review call before any bid is placed.</p>  </div>
-
-  <div class="pricing-cards">
-
-    <!-- CARD 1: NAVIGATOR — unchanged -->
-    <div class="pricing-card">
-      <div class="pricing-card-title">Navigator</div>
-      <div class="pricing-card-price">$599</div>
-      <div class="pricing-card-price-sub">One-time flat fee</div>
-    <p class="pricing-card-best">Best for buyers who want us to search dealer-only auctions and negotiate the best price — no extras, just the core service.</p>
-      <div class="pricing-card-divider"></div>
-      <ul class="pricing-card-list">
-        <li><span class="icon-check">✓</span> Up to 10 AI-matched vehicle selections, across as many follow-up calls as it takes to dial in your match</li>
-        <li><span class="icon-check">✓</span> We bid on your behalf at dealer-only auctions for each match — up to 10 attempts. If none result in a win, we introduce you directly to a dealer who has your vehicle</li>
-        <li><span class="icon-check">✓</span> Fair market value report — comparable pricing and one target number</li>
-        <li><span class="icon-check">✓</span> Vehicle history and condition report (1 included)</li>
-        <li><span class="icon-check">✓</span> Title and registration handled for Florida purchases — step-by-step guidance for out-of-state</li>
-      </ul>
-      <a class="pricing-card-cta cta-outline" href="https://tally.so/r/yPgxO8" target="_blank">Get Started</a>
-    </div>
-
-    <!-- CARD 2: FULL CONCIERGE — auction services added -->
-    <div class="pricing-card highlighted">
-      <div class="pricing-card-badge">Most Popular</div>
-      <div class="pricing-card-title">Full Concierge</div>
-      <div class="pricing-card-price">$999</div>
-      <div class="pricing-card-price-sub">One-time flat fee</div>
-     <p class="pricing-card-best">Best for anyone with a trade-in, or who wants unlimited search until we find the right match.</p>
-      <div class="pricing-card-divider"></div>
-      <ul class="pricing-card-list">
-        <li><span class="icon-check">✓</span> Everything in Navigator, plus:</li>
-        <li><span class="icon-check">✓</span> Unlimited AI-matched vehicle selections, across as many calls as it takes to find the right one</li>
-        <li><span class="icon-check">✓</span> Trade-in valuation and counter-negotiation</li>
-        <li><span class="icon-check">✓</span> Deal Shield — risk-free return guarantee pursued on eligible Manheim vehicles</li>
-      </ul>
-      <a class="pricing-card-cta cta-solid" href="https://tally.so/r/yPgxO8" target="_blank">Get Started</a>
-    </div>
-
-    <!-- CARD 3: PREMIER — allocation removed, Deal Shield and delivery added -->
-    <div class="pricing-card">
-      <div class="pricing-card-badge luxury">Luxury and Exotic</div>
-      <div class="pricing-card-title">Premier</div>
-      <div class="pricing-card-price">$1,799</div>
-      <div class="pricing-card-price-sub">One-time flat fee</div>
-      <p class="pricing-card-best">Best for vehicles $75,000 and above requiring specialist-level sourcing, negotiation, and post-purchase protection.</p>
-      <div class="pricing-card-divider"></div>
-    <ul class="pricing-card-list">
-        <li><span class="icon-check">✓</span> Everything in Full Concierge, plus:</li>
-        <li><span class="icon-check">✓</span> Luxury and exotic sourcing — auction and direct dealer, whichever gets you the vehicle</li>
-        <li><span class="icon-check">✓</span> ADM markup negotiation for hard-to-find dealer-sourced vehicles</li>
-        <li><span class="icon-check">✓</span> Extended deal timeline support up to 30 days</li>
-        <li><span class="icon-check">✓</span> Insurance quote concierge</li>
-        <li><span class="icon-check">✓</span> Personal debrief call after closing</li>
-      </ul>
-      <a class="pricing-card-cta cta-outline" href="https://tally.so/r/yPgxO8" target="_blank">Get Started</a>
-    </div>
-
-  </div>
-
-  <!-- ADDITIONAL SERVICES -->
-  <div class="pricing-tier-intro" style="margin-top:40px;">
     <h3 class="section-title" style="font-size:24px;">Additional Services</h3>
-    <p class="pricing-tier-sub">Beyond your tier, we personally arrange the following through our vetted network — priced individually based on your specific needs.</p>
+    <p class="pricing-tier-sub">We personally arrange the following through our vetted network — priced individually based on your specific needs.</p>
   </div>
   <div class="why-grid" style="max-width:900px; margin:0 auto 40px;">
     <div class="why-card"><div class="why-title">Delivery</div><div class="why-desc">To your home or preferred location.</div></div>
@@ -2155,103 +2055,7 @@ footer {
     <div class="why-card"><div class="why-title">Trade-In Pickup</div><div class="why-desc">Coordinated collection of your trade-in vehicle.</div></div>
     <div class="why-card"><div class="why-title">Pre-Purchase Inspection</div><div class="why-desc">On auction-sourced vehicles.</div></div>
     <div class="why-card"><div class="why-title">Full Detailing</div><div class="why-desc">On auction-sourced vehicles.</div></div>
-  </div>
-
-  <!-- CALLOUT -->
-
-  <!-- CALLOUT -->
-  <div class="pricing-callout">
-    <p>Not sure which tier fits your situation? Book a free 15-minute strategy call and we will tell you exactly which service you need — and whether we can help.</p>
-    <a class="pricing-callout-cta" href="https://tally.so/r/yPgxO8" target="_blank">Book Your Free Strategy Call</a>
-  </div>
-
-  <!-- COMPARISON TABLE -->
-  <h3 class="section-title" style="text-align:center; font-size:24px; margin-bottom:28px;">What Is Included At Each Level</h3>
-  <div class="pricing-table-wrap">
-    <table class="pricing-table">
-      <thead>
-        <tr>
-          <th>Feature</th>
-          <th>Navigator<br>$599</th>
-          <th>Full Concierge<br>$999</th>
-          <th>Premier<br>$1,799</th>
-        </tr>
-      </thead>
-     <tbody>
-        <tr>
-          <td>AI-matched vehicle selections</td>
-          <td>Up to 10</td>
-          <td>Unlimited</td>
-          <td>Unlimited</td>
-        </tr>
-        <tr>
-          <td>We bid on your behalf at auction</td>
-          <td><span class="icon-check">✓</span></td>
-          <td><span class="icon-check">✓</span></td>
-          <td><span class="icon-check">✓</span></td>
-        </tr>
-        <tr>
-          <td>Fair market value report</td>
-          <td><span class="icon-check">✓</span></td>
-          <td><span class="icon-check">✓</span></td>
-          <td><span class="icon-check">✓</span></td>
-        </tr>
-        <tr>
-          <td>Vehicle history and condition report</td>
-          <td><span class="icon-check">✓</span></td>
-          <td><span class="icon-check">✓</span></td>
-          <td><span class="icon-check">✓</span></td>
-        </tr>
-        <tr>
-          <td>Title and registration (FL handled / guidance out-of-state)</td>
-          <td><span class="icon-check">✓</span></td>
-          <td><span class="icon-check">✓</span></td>
-          <td><span class="icon-check">✓</span></td>
-        </tr>
-        <tr>
-          <td>Trade-in valuation and counter-negotiation</td>
-          <td><span class="icon-x">✕</span></td>
-          <td><span class="icon-check">✓</span></td>
-          <td><span class="icon-check">✓</span></td>
-        </tr>
-        <tr>
-          <td>Deal Shield — return guarantee</td>
-          <td><span class="icon-x">✕</span></td>
-          <td><span class="icon-check">✓</span></td>
-          <td><span class="icon-check">✓</span></td>
-        </tr>
-        <tr>
-          <td>Luxury and exotic sourcing (auction + direct dealer)</td>
-          <td><span class="icon-x">✕</span></td>
-          <td><span class="icon-x">✕</span></td>
-          <td><span class="icon-check">✓</span></td>
-        </tr>
-        <tr>
-          <td>ADM markup negotiation</td>
-          <td><span class="icon-x">✕</span></td>
-          <td><span class="icon-x">✕</span></td>
-          <td><span class="icon-check">✓</span></td>
-        </tr>
-        <tr>
-          <td>Extended deal timeline (up to 30 days)</td>
-          <td><span class="icon-x">✕</span></td>
-          <td><span class="icon-x">✕</span></td>
-          <td><span class="icon-check">✓</span></td>
-        </tr>
-        <tr>
-          <td>Insurance quote concierge</td>
-          <td><span class="icon-x">✕</span></td>
-          <td><span class="icon-x">✕</span></td>
-          <td><span class="icon-check">✓</span></td>
-        </tr>
-        <tr>
-          <td>Personal debrief call after closing</td>
-          <td><span class="icon-x">✕</span></td>
-          <td><span class="icon-x">✕</span></td>
-          <td><span class="icon-check">✓</span></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="why-card"><div class="why-title">Insurance Coordination</div><div class="why-desc">We coordinate insurance quotes for your new vehicle.</div></div>
   </div>
 </section>
 
@@ -2269,13 +2073,6 @@ footer {
     </details>
     <details class="faq-item">
       <summary>
-        <span class="faq-question">What if I don't save more than your fee?</span>
-        <span class="faq-icon">+</span>
-      </summary>
-      <p class="faq-answer">That has not happened. But if your situation is unusual, we will discuss it on your free strategy call before you commit to anything.</p>
-    </details>
-    <details class="faq-item">
-      <summary>
         <span class="faq-question">How do I know you're not connected to dealerships?</span>
         <span class="faq-icon">+</span>
       </summary>
@@ -2286,14 +2083,70 @@ footer {
         <span class="faq-question">How long does the process take?</span>
         <span class="faq-icon">+</span>
       </summary>
-      <p class="faq-answer">Most deals close within 5 to 7 business days from your intake call, depending on vehicle availability.</p>
+      <p class="faq-answer">Most deals close within 5 to 7 business days from your intake call, depending on vehicle availability. For harder-to-find vehicles, we can extend that timeline up to 30 days to make sure we get the right match.</p>
     </details>
     <details class="faq-item">
       <summary>
-        <span class="faq-question">Do you work on used cars too?</span>
+        <span class="faq-question">How many vehicle options will I see?</span>
         <span class="faq-icon">+</span>
       </summary>
-      <p class="faq-answer">Yes. Used car sourcing is available under the Full Concierge tier given the additional complexity of locating and vetting pre-owned inventory.</p>
+      <p class="faq-answer">There's no cap on how many rounds it takes.</p>
+    </details>
+    <details class="faq-item">
+      <summary>
+        <span class="faq-question">Do you bid at auction for me?</span>
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-answer">Yes. We bid on your behalf at dealer-only auctions for each match. If a bid doesn't win, we introduce you directly to a dealer who has your vehicle.</p>
+    </details>
+    <details class="faq-item">
+      <summary>
+        <span class="faq-question">What research do I get on a vehicle before I commit?</span>
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-answer">Every client receives a fair market value report with comparable pricing and a target number before any bid is placed. A vehicle history and condition report is also available for an added fee.</p>
+    </details>
+    <details class="faq-item">
+      <summary>
+        <span class="faq-question">Do you handle title and registration?</span>
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-answer">Yes. We handle title and registration for Georgia purchases, and provide step-by-step guidance if you're out of state.</p>
+    </details>
+    <details class="faq-item">
+      <summary>
+        <span class="faq-question">Can you help with my trade-in?</span>
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-answer">Yes — we provide a trade-in valuation and handle counter-negotiation with the dealer on your behalf.</p>
+    </details>
+    <details class="faq-item">
+      <summary>
+        <span class="faq-question">What is Deal Shield?</span>
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-answer">Deal Shield is a risk-free return guarantee we pursue on eligible Manheim-sourced vehicles, giving you extra protection after the purchase.</p>
+    </details>
+    <details class="faq-item">
+      <summary>
+        <span class="faq-question">Do you source luxury or exotic vehicles?</span>
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-answer">Yes. We handle luxury and exotic sourcing through both auction and direct dealer channels.</p>
+    </details>
+    <details class="faq-item">
+      <summary>
+        <span class="faq-question">Can you help me with insurance?</span>
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-answer">Yes — insurance coordination is available as an additional service. We'll get you quotes for your new vehicle for an added fee.</p>
+    </details>
+    <details class="faq-item">
+      <summary>
+        <span class="faq-question">Do we talk after the purchase is complete?</span>
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-answer">Yes — we do a personal debrief call after closing to make sure everything went smoothly and answer any last questions.</p>
     </details>
   </div>
 </section>
