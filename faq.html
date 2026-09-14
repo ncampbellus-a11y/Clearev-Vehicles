@@ -43,15 +43,44 @@
 
   header.page-head {
     background: var(--navy);
-    padding: 3.5rem 1.5rem 3rem;
+    padding: 0 1.5rem 3rem;
     text-align: center;
   }
 
   header.page-head h1 {
-    color: var(--cream);
+    color: var(--gold);
     font-size: clamp(2rem, 5vw, 2.75rem);
     max-width: 30ch;
     margin: 0 auto 0.75rem;
+  }
+
+  .breadcrumb {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+  }
+
+  .breadcrumb a {
+    color: var(--cream);
+    opacity: 0.85;
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  .breadcrumb .sep {
+    color: var(--cream);
+    opacity: 0.4;
+    margin: 0 0.5rem;
+  }
+
+  .breadcrumb .current {
+    color: var(--gold);
   }
 
   header.page-head p {
@@ -317,8 +346,44 @@
 </head>
 <body>
 
+<!-- NAV -->
+<nav style="display:flex; align-items:center; padding: 20px 40px; position:relative; background:var(--navy);">
+  <button id="hamburgerBtn" aria-label="Menu" aria-expanded="false" style="background:none; border:none; cursor:pointer; padding:8px; display:flex; flex-direction:column; gap:5px; flex-shrink:0;">
+    <span style="width:22px; height:1.5px; background:#F5F2EC; display:block;"></span>
+    <span style="width:22px; height:1.5px; background:#F5F2EC; display:block;"></span>
+    <span style="width:22px; height:1.5px; background:#F5F2EC; display:block;"></span>
+  </button>
+  <div id="hamburgerMenu" style="display:none; position:absolute; top:60px; left:40px; background:var(--navy); border:1px solid rgba(201,168,76,0.3); border-radius:4px; padding:10px 0; min-width:200px; z-index:1000; box-shadow:0 10px 30px rgba(0,0,0,0.35);">
+    <a href="/#about" style="display:block; padding:10px 24px; color:#F5F2EC; text-decoration:none; font-family:'Jost',sans-serif; font-size:14px;">About Us</a>
+    <a href="/faq.html" style="display:block; padding:10px 24px; color:var(--gold); text-decoration:none; font-family:'Jost',sans-serif; font-size:14px;">FAQ</a>
+    <a href="/privacy.html" style="display:block; padding:10px 24px; color:#F5F2EC; text-decoration:none; font-family:'Jost',sans-serif; font-size:14px;">Privacy Policy</a>
+    <a href="/finance-application.html" style="display:block; padding:10px 24px; color:#F5F2EC; text-decoration:none; font-family:'Jost',sans-serif; font-size:14px;">Finance Application</a>
+  </div>
+</nav>
+<script>
+  (function() {
+    var btn = document.getElementById('hamburgerBtn');
+    var menu = document.getElementById('hamburgerMenu');
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = menu.style.display === 'block';
+      menu.style.display = isOpen ? 'none' : 'block';
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+    document.addEventListener('click', function(e) {
+      if (menu.style.display === 'block' && !menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.style.display = 'none';
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
+
 <header class="page-head">
-  <h1>Questions buyers ask before hiring us</h1>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a><span class="sep">/</span><span class="current">FAQ</span>
+  </nav>
+  <h1>Questions Asked Before Hiring Us</h1>
   <p>Straight answers on cost, auction access, and how the process works.</p>
 </header>
 
@@ -350,7 +415,7 @@
     </div>
   </details>
 
-  <details class="faq-item">
+  <details class="faq-item" id="financing">
     <summary>Do you offer financing?</summary>
     <div class="answer">
       <p>Yes. If you need financing, we'll send you a credit application to complete, along with your driver's license and insurance card, to finalize the transaction.</p>
@@ -446,12 +511,41 @@
 
   <div class="cta-block">
     <p>Ready to see what Clearev can source for you?</p>
-    <a href="/">Get started</a>
+    <a href="https://tally.so/r/yPgxO8" target="_blank">Get started</a>
   </div>
 
-  <p class="note">Note: replace the "Get started" link target above with your actual pricing or contact anchor once this is placed in the live site.</p>
-
 </main>
+
+<script>
+  (function() {
+    if (window.location.hash) {
+      var target = document.querySelector(window.location.hash);
+      if (target && target.tagName === 'DETAILS') {
+        target.open = true;
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  })();
+</script>
+
+<!-- BACK TO TOP -->
+<button id="backToTop" aria-label="Back to top" style="position:fixed; bottom:28px; right:28px; width:48px; height:48px; border-radius:50%; background:var(--gold); border:none; cursor:pointer; display:none; align-items:center; justify-content:center; box-shadow:0 6px 20px rgba(0,0,0,0.3); z-index:999;">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="12" y1="19" x2="12" y2="5"></line>
+    <polyline points="5 12 12 5 19 12"></polyline>
+  </svg>
+</button>
+<script>
+  (function() {
+    var topBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+      topBtn.style.display = window.scrollY > 400 ? 'flex' : 'none';
+    });
+    topBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+</script>
 
 </body>
 </html>
