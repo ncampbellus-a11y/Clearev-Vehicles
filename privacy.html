@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | Clearev Consultants</title>
+<meta name="description" content="How Clearev Consultants collects, uses, and protects your information.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #1B2E4B;
+    --navy-soft: #2C4268;
+    --cream: #FFFFFF;
+    --cream-dark: #EFEFEF;
+    --gold: #C9A84C;
+    --gold-dark: #8B7340;
+    --ink: #4A5568;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  h1, h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: var(--navy);
+    margin: 0;
+  }
+
+  header.page-head {
+    background: var(--navy);
+    padding: 0 1.5rem 3rem;
+    text-align: center;
+  }
+
+  header.page-head h1 {
+    color: var(--gold);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    max-width: 30ch;
+    margin: 0 auto 0.75rem;
+  }
+
+  header.page-head p {
+    color: var(--cream);
+    opacity: 0.75;
+    font-size: 1.05rem;
+    max-width: 50ch;
+    margin: 0 auto;
+  }
+
+  .breadcrumb {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+  }
+
+  .breadcrumb a {
+    color: var(--cream);
+    opacity: 0.85;
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  .breadcrumb .sep {
+    color: var(--cream);
+    opacity: 0.4;
+    margin: 0 0.5rem;
+  }
+
+  .breadcrumb .current {
+    color: var(--gold);
+  }
+
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  section.policy-block {
+    margin-bottom: 1.75rem;
+  }
+
+  section.policy-block h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  section.policy-block p {
+    margin: 0;
+    max-width: 62ch;
+  }
+
+  section.policy-block a {
+    color: var(--gold-dark);
+  }
+
+  .updated-note {
+    font-size: 0.85rem;
+    color: rgba(74, 85, 104, 0.7);
+    font-style: italic;
+    margin-top: 2.5rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav style="display:flex; align-items:center; padding: 20px 40px; position:relative; background:var(--navy);">
+  <button id="hamburgerBtn" aria-label="Menu" aria-expanded="false" style="background:none; border:none; cursor:pointer; padding:8px; display:flex; flex-direction:column; gap:5px; flex-shrink:0;">
+    <span style="width:22px; height:1.5px; background:#F5F2EC; display:block;"></span>
+    <span style="width:22px; height:1.5px; background:#F5F2EC; display:block;"></span>
+    <span style="width:22px; height:1.5px; background:#F5F2EC; display:block;"></span>
+  </button>
+  <div id="hamburgerMenu" style="display:none; position:absolute; top:60px; left:40px; background:var(--navy); border:1px solid rgba(201,168,76,0.3); border-radius:4px; padding:10px 0; min-width:200px; z-index:1000; box-shadow:0 10px 30px rgba(0,0,0,0.35);">
+    <a href="/#about" style="display:block; padding:10px 24px; color:#F5F2EC; text-decoration:none; font-family:'Jost',sans-serif; font-size:14px;">About Us</a>
+    <a href="/faq.html" style="display:block; padding:10px 24px; color:#F5F2EC; text-decoration:none; font-family:'Jost',sans-serif; font-size:14px;">FAQ</a>
+    <a href="/privacy.html" style="display:block; padding:10px 24px; color:var(--gold); text-decoration:none; font-family:'Jost',sans-serif; font-size:14px;">Privacy Policy</a>
+    <a href="/finance-application.html" style="display:block; padding:10px 24px; color:#F5F2EC; text-decoration:none; font-family:'Jost',sans-serif; font-size:14px;">Finance Application</a>
+  </div>
+</nav>
+<script>
+  (function() {
+    var btn = document.getElementById('hamburgerBtn');
+    var menu = document.getElementById('hamburgerMenu');
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = menu.style.display === 'block';
+      menu.style.display = isOpen ? 'none' : 'block';
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+    document.addEventListener('click', function(e) {
+      if (menu.style.display === 'block' && !menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.style.display = 'none';
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
+
+<header class="page-head">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a><span class="sep">/</span><span class="current">Privacy Policy</span>
+  </nav>
+  <h1>Privacy Policy</h1>
+  <p>How we collect, use, and protect your information.</p>
+</header>
+
+<main>
+
+  <section class="policy-block">
+    <h2>Who we are</h2>
+    <p>Clearev Consultants ("we," "us") is a vehicle sourcing brokerage operating nationwide. We respect your privacy and want you to know exactly what information we collect and how it's used.</p>
+  </section>
+
+  <section class="policy-block">
+    <h2>Information we collect</h2>
+    <p>When you submit our intake form or book a consultation, we collect your name, phone number, email address, and vehicle preferences. This information is collected through Tally (our form provider) and Cal.com (our scheduling provider).</p>
+  </section>
+
+  <section class="policy-block">
+    <h2>How we use it</h2>
+    <p>We use this information to source vehicles on your behalf, communicate with you about your search and purchase, and process your transaction.</p>
+  </section>
+
+  <section class="policy-block">
+    <h2>Who we share it with</h2>
+    <p>We do not share your information with dealers, auction houses, or any other third party. Tally and Cal.com act as our form and scheduling providers and process data under their own privacy policies, available at <a href="https://tally.so/privacy" target="_blank" rel="noopener">tally.so/privacy</a> and <a href="https://cal.com/privacy" target="_blank" rel="noopener">cal.com/privacy</a>.</p>
+  </section>
+
+  <section class="policy-block">
+    <h2>Payment information</h2>
+    <p>All payments are made by wire transfer. We do not collect or store credit card or bank account numbers.</p>
+  </section>
+
+  <section class="policy-block">
+    <h2>Contact us</h2>
+    <p>Questions about this policy can be sent to <a href="mailto:info@clearevconsultants.com">info@clearevconsultants.com</a>.</p>
+  </section>
+
+  <p class="updated-note">Last updated: September 13, 2026</p>
+
+</main>
+
+<!-- BACK TO TOP -->
+<button id="backToTop" aria-label="Back to top" style="position:fixed; bottom:28px; right:28px; width:48px; height:48px; border-radius:50%; background:var(--gold); border:none; cursor:pointer; display:none; align-items:center; justify-content:center; box-shadow:0 6px 20px rgba(0,0,0,0.3); z-index:999;">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="12" y1="19" x2="12" y2="5"></line>
+    <polyline points="5 12 12 5 19 12"></polyline>
+  </svg>
+</button>
+<script>
+  (function() {
+    var topBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+      topBtn.style.display = window.scrollY > 400 ? 'flex' : 'none';
+    });
+    topBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+</script>
+
+</body>
+</html>
