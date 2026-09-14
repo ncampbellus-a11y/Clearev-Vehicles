@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Buying Service FAQ | Clearev Consultants</title>
+<meta name="description" content="Answers to the questions buyers ask before hiring a vehicle sourcing service: how Clearev's fee is calculated, dealer-only auction access, and how the process works.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Colors and fonts below are pulled directly from the live index.html
+     (both the main and Clearev-Auto-Sourcing-Landing-Page branches match). -->
+<style>
+  :root {
+    --navy: #1B2E4B;
+    --navy-soft: #2C4268;
+    --cream: #FFFFFF;
+    --cream-dark: #EFEFEF;
+    --gold: #C9A84C;
+    --gold-dark: #8B7340;
+    --ink: #4A5568;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  h1, h2, .accent-serif {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: var(--navy);
+    margin: 0;
+  }
+
+  header.page-head {
+    background: var(--navy);
+    padding: 3.5rem 1.5rem 3rem;
+    text-align: center;
+  }
+
+  header.page-head h1 {
+    color: var(--cream);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    max-width: 30ch;
+    margin: 0 auto 0.75rem;
+  }
+
+  header.page-head p {
+    color: var(--cream);
+    opacity: 0.75;
+    font-size: 1.05rem;
+    max-width: 50ch;
+    margin: 0 auto;
+  }
+
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(15, 26, 43, 0.15);
+    padding: 1.5rem 0;
+  }
+
+  .faq-item summary {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--navy);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .faq-item summary::-webkit-details-marker { display: none; }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--gold);
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-item .answer {
+    margin-top: 0.9rem;
+    font-size: 1rem;
+    color: var(--ink);
+    max-width: 62ch;
+  }
+
+  .faq-item .answer p { margin: 0 0 0.75rem; }
+  .faq-item .answer p:last-child { margin-bottom: 0; }
+
+  .fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+  }
+
+  .fee-table thead th {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--cream-dark);
+    text-align: left;
+    padding: 0.65rem 1rem;
+  }
+
+  .fee-table tbody td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid var(--cream-dark);
+    color: var(--ink);
+  }
+
+  .fee-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .fee-table tbody td:last-child {
+    font-weight: 500;
+    color: var(--gold-dark);
+    text-align: right;
+  }
+
+  .fee-table thead th:last-child {
+    text-align: right;
+  }
+
+  .cta-block {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--navy-soft);
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .cta-block p {
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    margin: 0 0 1rem;
+  }
+
+  .cta-block a {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: 3px;
+  }
+
+  .note {
+    font-size: 0.85rem;
+    color: rgba(42, 42, 42, 0.6);
+    margin-top: 3rem;
+    max-width: 62ch;
+  }
+</style>
+
+<!-- FAQPage structured data: this is what allows Google to potentially
+     show these Q&As directly as an expandable rich result in search,
+     rather than requiring a click just to see if the page is relevant. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is it worth hiring a car buying service instead of negotiating with a dealer myself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clearev sources vehicles through dealer-only wholesale auctions rather than retail lots, which is where the savings come from — wholesale pricing instead of retail markup. There's no all-day sitting in a dealership finance office: the entire process, from vehicle search through paperwork, happens online from home. Delivery and financing are both available, so you never have to set foot on a lot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Clearev Consultants cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clearev's fee — referred to as the dealer fee — is based on the value of the vehicle you're purchasing: $750 for deals under $5,000, $1,250 for deals between $5,000 and $25,000, $2,000 for deals between $25,000 and $50,000, and 4% of the sale price for deals of $50,000 or more. You'll know the exact fee before you commit to anything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer financing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If you need financing, we'll send you a credit application to complete, along with your driver's license and insurance card, to finalize the transaction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you have access to dealer-only auctions like Manheim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clearev pursues dealer-only auction access, including Manheim, for eligible vehicles as part of the sourcing process. Not every request qualifies for auction sourcing, since availability depends on what's actually moving through the auction pipeline at the time — it's evaluated case by case rather than guaranteed for every vehicle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I see the vehicle's condition before bidding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every auction vehicle comes with a detailed inspection report that gives insight into its condition. For an additional cost, Manheim can also perform a complete inspection on the vehicle before you commit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I visit a location to inspect a vehicle before I buy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All vehicles are located on the dealer's auction premises and are not available for inspection or purchase by the general public."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the vehicle come with a warranty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most auction and wholesale vehicles do not carry a factory warranty. We want that clear upfront rather than have you assume standard dealer warranty coverage applies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the deposit and bidding process work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Before bidding begins, you'll wire 4% of the estimated vehicle cost as a deposit — this is separate from the dealer fee described above. If we don't win the first auction, we keep bidding on additional matching vehicles until we get you the one you want — you won't need to send another deposit for each attempt. If you decide at any point that you no longer want to continue working with us, your deposit is refunded, minus the dealer fee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you cancel a bid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All sales are final once you've won a vehicle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens after I win the auction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You'll receive an email confirming you've won, along with an invoice for the remainder of the vehicle cost and any additional fees (Manheim, admin, delivery, etc.). Your deposit is applied toward the vehicle purchase and the dealer fee. From there, you'll get instructions on next steps — either a gate pass to pick up the vehicle yourself, or delivery options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What payment methods do you accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wire transfer only, for both the deposit and the remaining balance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does title and registration work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the title is on hand, we handle the tag and title paperwork and provide everything you need to drive the vehicle if you're in Georgia. If you're outside Georgia, you'll receive all the documents required to register the car in your own state. If the title isn't on hand yet, Manheim has 30 days to provide it — if they can't, we can file for arbitration and return the vehicle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you get paid by the dealer or auction, or does the fee come from me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The fee is paid by you, the buyer, based on the fee schedule above. Clearev isn't paid by dealerships and has no referral arrangement tied to which dealer or lot you buy from, which keeps the incentive aligned with getting the best outcome for you rather than steering you toward a particular vehicle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you only serve buyers in Georgia and Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Clearev operates fully remote and works with buyers nationwide, not just in Georgia and Florida."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you guarantee you'll get me the exact vehicle I want?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No sourcing service can guarantee a specific unit will be available through auction or a dealer network at any given moment. What Clearev commits to is the process — active sourcing across available channels on your behalf — rather than a guaranteed outcome on one specific vehicle."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="page-head">
+  <h1>Questions buyers ask before hiring us</h1>
+  <p>Straight answers on cost, auction access, and how the process works.</p>
+</header>
+
+<main>
+
+  <details class="faq-item" open>
+    <summary>Is it worth hiring a car buying service instead of negotiating with a dealer myself?</summary>
+    <div class="answer">
+      <p>Clearev sources vehicles through dealer-only wholesale auctions rather than retail lots, which is where the savings come from — wholesale pricing instead of retail markup. There's no all-day sitting in a dealership finance office: the entire process, from vehicle search through paperwork, happens online from home. Delivery and financing are both available, so you never have to set foot on a lot.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>How much does Clearev Consultants cost?</summary>
+    <div class="answer">
+      <p>Clearev's fee — referred to as the dealer fee — is based on the value of the vehicle you're purchasing:</p>
+      <table class="fee-table">
+        <thead>
+          <tr><th>Deal value</th><th>Fee</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Under $5,000</td><td>$750</td></tr>
+          <tr><td>$5,000 &ndash; $25,000</td><td>$1,250</td></tr>
+          <tr><td>$25,000 &ndash; $50,000</td><td>$2,000</td></tr>
+          <tr><td>$50,000+</td><td>4% of sale price</td></tr>
+        </tbody>
+      </table>
+      <p>You'll know the exact fee before you commit to anything.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Do you offer financing?</summary>
+    <div class="answer">
+      <p>Yes. If you need financing, we'll send you a credit application to complete, along with your driver's license and insurance card, to finalize the transaction.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Do you have access to dealer-only auctions like Manheim?</summary>
+    <div class="answer">
+      <p>Clearev pursues dealer-only auction access, including Manheim, for eligible vehicles as part of the sourcing process. Not every request qualifies for auction sourcing, since availability depends on what's actually moving through the auction pipeline at the time — it's evaluated case by case rather than guaranteed for every vehicle.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Can I see the vehicle's condition before bidding?</summary>
+    <div class="answer">
+      <p>Every auction vehicle comes with a detailed inspection report that gives insight into its condition. For an additional cost, Manheim can also perform a complete inspection on the vehicle before you commit.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Can I visit a location to inspect a vehicle before I buy?</summary>
+    <div class="answer">
+      <p>No. All vehicles are located on the dealer's auction premises and are not available for inspection or purchase by the general public.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Does the vehicle come with a warranty?</summary>
+    <div class="answer">
+      <p>Most auction and wholesale vehicles do not carry a factory warranty. We want that clear upfront rather than have you assume standard dealer warranty coverage applies.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>How does the deposit and bidding process work?</summary>
+    <div class="answer">
+      <p>Before bidding begins, you'll wire 4% of the estimated vehicle cost as a deposit — this is separate from the dealer fee described above. If we don't win the first auction, we keep bidding on additional matching vehicles until we get you the one you want — you won't need to send another deposit for each attempt.</p>
+      <p>If you decide at any point that you no longer want to continue working with us, your deposit is refunded, minus the dealer fee.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Can you cancel a bid?</summary>
+    <div class="answer">
+      <p>No. All sales are final once you've won a vehicle.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>What happens after I win the auction?</summary>
+    <div class="answer">
+      <p>You'll receive an email confirming you've won, along with an invoice for the remainder of the vehicle cost and any additional fees (Manheim, admin, delivery, etc.). Your deposit is applied toward the vehicle purchase and the dealer fee.</p>
+      <p>From there, you'll get instructions on next steps — either a gate pass to pick up the vehicle yourself, or delivery options.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>What payment methods do you accept?</summary>
+    <div class="answer">
+      <p>Wire transfer only, for both the deposit and the remaining balance.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>How does title and registration work?</summary>
+    <div class="answer">
+      <p>If the title is on hand, we handle the tag and title paperwork and provide everything you need to drive the vehicle if you're in Georgia. If you're outside Georgia, you'll receive all the documents required to register the car in your own state.</p>
+      <p>If the title isn't on hand yet, Manheim has 30 days to provide it — if they can't, we can file for arbitration and return the vehicle.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Do you get paid by the dealer or auction, or does the fee come from me?</summary>
+    <div class="answer">
+      <p>The fee is paid by you, the buyer, based on the schedule above. Clearev isn't paid by dealerships and has no referral arrangement tied to which dealer or lot you buy from — which keeps the incentive aligned with getting the best outcome for you rather than steering you toward a particular vehicle.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Do you only serve buyers in Georgia and Florida?</summary>
+    <div class="answer">
+      <p>No. Clearev operates fully remote and works with buyers nationwide, not just in Georgia and Florida.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Can you guarantee you'll get me the exact vehicle I want?</summary>
+    <div class="answer">
+      <p>No sourcing service can guarantee a specific unit will be available through auction or a dealer network at any given moment. What Clearev commits to is the process — active sourcing across available channels on your behalf — rather than a guaranteed outcome on one specific vehicle.</p>
+    </div>
+  </details>
+
+  <div class="cta-block">
+    <p>Ready to see what Clearev can source for you?</p>
+    <a href="/">Get started</a>
+  </div>
+
+  <p class="note">Note: replace the "Get started" link target above with your actual pricing or contact anchor once this is placed in the live site.</p>
+
+</main>
+
+</body>
+</html>
